@@ -9,3 +9,14 @@ CREATE TABLE tb_game (
     short_description TEXT NOT NULL,
     long_description TEXT NOT NULL
 );
+
+CREATE TABLE tb_game_list (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE tb_belonging (
+    list_id BIGINT,
+    game_id BIGINT,
+    position INTEGER NOT NULL
+);
